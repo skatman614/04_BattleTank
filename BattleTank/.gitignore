@@ -62,4 +62,4 @@ Intermediate/*
 DerivedDataCache/*
 
 # Ignore Starter Content
-BattleTank/Content/StarterContent/*
+Content/StarterContent/
