@@ -3,6 +3,8 @@
 #include "BattleTank.h"
 #include "Tank.h"
 
+
+
 // Sets default values
 ATank::ATank()
 {
@@ -21,6 +23,10 @@ void ATank::BeginPlay()
 	
 }
 
+void ATank::SetBarrelReference(UStaticMeshComponent * BarrelToSet)
+{
+	TankAimingComponent->SetBarrelReference(BarrelToSet);
+}
 // Called every frame
 void ATank::Tick( float DeltaTime )
 {
