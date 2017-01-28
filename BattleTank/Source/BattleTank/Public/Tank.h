@@ -7,6 +7,7 @@
 #include "Tank.generated.h"
 
 class UTankBarrel;
+class UTankTrack;
 class UTankAimingComponent;
 class AProjectile;
 class UTankTurret;
@@ -25,6 +26,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = Setup)
 	void SetTurretReference(UTankTurret* TurretToSet);
+
+	UFUNCTION(BlueprintCallable, Category = Setup)
+	void SetTankLeftTrackReference(UTankTrack * TrackToSet);
+
+	UFUNCTION(BlueprintCallable, Category = Setup)
+	void SetTankRightTrackReference(UTankTrack * TrackToSet);
 
 	UFUNCTION(BlueprintCallable, Category = Setup)
 	void Fire();
@@ -56,6 +63,10 @@ private:
 
 	// Local barrel reference for spawn
 	UTankBarrel* Barrel = nullptr;
+
+	UTankTrack* TankLeftTrack = nullptr;
+
+	UTankTrack* TankRightTrack = nullptr;
 
 	double LastFireTime = 0;
 		
