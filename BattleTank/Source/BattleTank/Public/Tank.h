@@ -11,6 +11,7 @@ class UTankTrack;
 class UTankAimingComponent;
 class AProjectile;
 class UTankTurret;
+class UTankMovementComponent;
 
 UCLASS()
 class BATTLETANK_API ATank : public APawn
@@ -40,6 +41,9 @@ protected:
 	UTankAimingComponent* TankAimingComponent = nullptr;
 
 	AProjectile* ProjectileComponent = nullptr;
+
+	UPROPERTY(BlueprintReadOnly, Category = Testing)
+	UTankMovementComponent* TankMovementComponent = nullptr;
 
 
 private:
